@@ -24,6 +24,7 @@ public class LocationNotificationIntentService extends IntentService {
         // 位置情報が取得できて入ればステータスバーへ通知
         if (LocationUtil.isDefinedLocation(location)) {
             Intent mapsIntent = MapsActivity.createIntent(getApplicationContext(), location);
+            mapsIntent.setFlags( Intent.FLAG_ACTIVITY_NEW_TASK);
             NotificationUtil.notify(getApplicationContext(), mapsIntent
                     , "位置情報通知", "最新位置情報をマップで確認", "緯度:" + location.latitude + ", 緯度:" + location.longitude);
         }

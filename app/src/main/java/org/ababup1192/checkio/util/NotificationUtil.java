@@ -26,7 +26,7 @@ public class NotificationUtil {
     public static void notify(Context context, Intent intent, String tickerText, String titleText, String contentText) {
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         notificationBuilder
                 .setSmallIcon(R.drawable.ic_launcher)    // アイコン
                 .setTicker(tickerText)                   // 通知バーに表示する簡易メッセージ
