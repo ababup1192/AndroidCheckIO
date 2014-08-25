@@ -1,4 +1,4 @@
-package org.ababup1192.checkio;
+package org.ababup1192.checkio.util;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -7,6 +7,11 @@ import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 
+import org.ababup1192.checkio.R;
+
+/**
+ * ステータスバー通知のユーティリティ
+ */
 public class NotificationUtil {
 
     /**
@@ -25,7 +30,7 @@ public class NotificationUtil {
         notificationBuilder
                 .setSmallIcon(R.drawable.ic_launcher)    // アイコン
                 .setTicker(tickerText)                   // 通知バーに表示する簡易メッセージ
-                .setWhen(System.currentTimeMillis())     // 時間
+                .setWhen(SystemClock.elapsedRealtime())     // 時間
                 .setContentTitle(titleText)              // 展開メッセージのタイトル
                 .setContentText(contentText)             // 展開メッセージの詳細メッセージ
                 .setContentIntent(pendingIntent);        // 通知クリックによって開かれるIntent

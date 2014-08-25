@@ -4,7 +4,19 @@
     <string name="app_name">CheckIO</string>
     <string name="action_settings">Settings</string>
 
-    <string name="notification_on">通知ON</string>
-    <string name="notification_off">通知OFF</string>
+    <!-- MainActivity -->
+    <string name="toggle_on_location">位置取得ON</string>
+    <string name="toggle_off_location">位置取得OFF</string>
+    <string name="toggle_on_notification">位置情報通知ON</string>
+    <string name="toggle_off_notification">位置情報通知OFF</string>
+
+    <string name="button_checkpoint">チェックポイントの設定</string>
+    <string name="button_check_io">チェックイン・アウトの開始</string>
+
+    <!-- MapsActivity -->
+    <string name="title_activity_maps">現在位置の表示</string>
+
+    <!-- CheckpointMapsActivity -->
+    <string name="title_activity_checkpoint_maps">チェックポイントの設定</string>
 
 </resources>
